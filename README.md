@@ -1,27 +1,16 @@
-# React + TypeScript + Vite
+# Blog Generator for bdx.town
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BDX.town now uses Plume to allow its users to manage their own blogs. Unfortunately, we have been experiencing numerous issues with Plume lately, and due to our commitment to being eco-responsible, I'd like to transition to a static file-based solution.
 
-Currently, two official plugins are available:
+## Not Just Another Static Blog Generator
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project does not aim to create yet another static blog generator; instead, it will utilize 11ty for that purpose. Our goal here is to develop a static file-based CMS, enabling our users to manage their blogs independently without relying on any server except Nginx (which is necessary in any case).
 
-## Expanding the ESLint configuration
+While some users may be able to manage their blogs using FTP or similar solutions, not all of our users are necessarily tech-savvy. Therefore, a solution with an improved and simplified user experience (UX) is essential. To achieve this, we intend to leverage static HTML files to create a multi-page application with progressive enhancement (yes, we plan to make it functional without JavaScript).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technical Stack
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+* A Vite project customized to generate multiple HTML files, providing a lightweight CMS app.
+* An NGINX server with Webdav enabled (which will also handle authentication at some point) to manage source content files.
+* Some scripts to trigger 11ty when files are created, edited, or deleted.
+* 11ty
