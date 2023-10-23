@@ -1,3 +1,4 @@
-import index from './App.tsx';
+import articles from './features/ArticleList';
 
-export { index, index as app };
+
+export { articles };

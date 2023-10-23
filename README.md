@@ -6,7 +6,7 @@ BDX.town now uses Plume to allow its users to manage their own blogs. Unfortunat
 
 This project does not aim to create yet another static blog generator; instead, it will utilize 11ty for that purpose. Our goal here is to develop a static file-based CMS, enabling our users to manage their blogs independently without relying on any server except Nginx (which is necessary in any case).
 
-While some users may be able to manage their blogs using FTP or similar solutions, not all of our users are necessarily tech-savvy. Therefore, a solution with an improved and simplified user experience (UX) is essential. To achieve this, we intend to leverage static HTML files to create a multi-page application with progressive enhancement (yes, we plan to make it functional without JavaScript).
+While some users may be able to manage their blogs using FTP or similar solutions, not all of our users are necessarily tech-savvy. Therefore, a solution with an improved and simplified user experience (UX) is essential. To achieve this, we intend to leverage static HTML files to create a multi-page application.
 
 ## Technical Stack
 
